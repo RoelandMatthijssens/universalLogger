@@ -1,18 +1,20 @@
 import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
 import {DebugStyles} from '../../utils/DebugStyles'
+import {Search} from './Search'
 
-export const TrackerTile = ({name, icon}) => {
+export const Header = ({onSearch}) => {
   return (
     <View style={[DebugStyles.default, Styles.container]}>
-      <Text>{name}</Text>
+      <Search onSearch={onSearch} />
     </View>
   )
 }
 
 const Styles = StyleSheet.create({
   container: {
-    height: 100,
-    width: 100,
+    flex: 1,
+    flexGrow: 0.2,
+    flexShrink: 0,
   },
 })
